@@ -10,7 +10,7 @@ import (
 	"github.com/podhmo-sandbox/go-mock-sandbox/user/vmock"
 )
 
-func TestUserServiceEndpoint(t *testing.T) {
+func TestUserServiceEndpointVMock(t *testing.T) {
 	id := "1"
 	service := &vmock.UserService{
 		GetFunc: func(id string) (*user.User, error) {
