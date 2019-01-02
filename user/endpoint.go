@@ -11,7 +11,7 @@ type UserEndpoint struct {
 	Service UserService
 }
 
-// Get :
+// GetUser :
 func (ep *UserEndpoint) GetUser(w http.ResponseWriter, r *http.Request) {
 	id := strings.TrimPrefix(r.URL.Path, "/users/")
 	u, err := ep.Service.Get(id)
